@@ -1,0 +1,13 @@
+<div class="sidenav-content">
+    <ul class="nav-list" [ngClass]="{'nav-list-open': sideNavStatus}">
+        <li class="nav-list-item"
+         *ngFor="let item of list">
+            <i class="{{item.icon}}"></i>
+            <span>
+                <p  style="color:rgb(12, 12, 12);"routerLink="/{{item.name}}" class="btn btn-dange">{{item.name}}</p>
+                <!-- <a href="#">"routerLink="/{{item.name}}"  </a> -->
+            </span>
+        </li>
+    </ul>
+</div>
+        <!-- <p  style="color:blue;"routerLink="/{{item.name}}" class="btn btn-dange">New for shopping?  Click here for Sign Up</p> -->

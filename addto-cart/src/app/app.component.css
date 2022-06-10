@@ -1,0 +1,48 @@
+app-header {
+    position: fixed;
+    width: 100%;
+    top:0px;
+    height: 4rem;
+    z-index: 2;
+
+}
+main{
+    position: absolute;
+    width: 100%;
+    top: 4rem;
+    z-index: 1;
+
+}
+app-sidenav
+{
+    position: absolute;
+    left: 0rem;
+
+    width: 0px;
+    height: calc(200vh - 4rem);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    border-top: 1px solid white;
+    overflow-x: hidden;
+    white-space:nowrap;
+    transition: width 250ms ease-in ;
+
+}
+
+.black-border{
+    border:1px solid black;
+}
+.app-sidenav-open{
+    width: 200px;
+}
+.display.area{
+    position: absolute;
+    left: 250px;
+    width: calc(100% - 250px);
+    transition: left 250ms ease-in,width  250ms ease-in;
+}
+.display-area-shrink
+{
+    width: calc(100% -250px);
+    left: 250px;
+}

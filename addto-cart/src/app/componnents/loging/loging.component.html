@@ -1,0 +1,67 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<body>
+
+<br>
+
+
+<form   class ="border p-5 rounded-10" [formGroup]="loginForm" (ngSubmit)="loginSubmited()">
+    <div class="row g-0">
+        <div class="col text-center p-2 mb-3 bg-light">
+            <span class="fs-3">Login</span>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email"
+                formControlName="email">
+                <div class="form-text text-danger" *ngIf="emailId.errors?.['required'] && (emailId.dirty || emailId.touched)">
+                    Email is required
+                </div>
+                <div class="form-text text-danger" *ngIf="emailId.errors?.['email'] && (emailId.dirty || emailId.touched)">
+                    Email is invalid
+                </div>
+
+            </div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <label for="email" class="form-label">Password</label>
+            <input type="password" class="form-control" id="pwd" 
+            formControlName="pwd">
+        </div>
+        <div class="form-text text-danger" *ngIf="profilePassword.errors?.['required'] && (profilePassword.dirty || profilePassword.touched)">
+            password is required
+        </div>
+        <div class="form-text text-danger" 
+        *ngIf="profilePassword.errors?.['minlength'] || profilePassword.errors?.['maxlength']  &&
+         (profilePassword.dirty || profilePassword.touched)">
+            password should be between 6 to 10 characters long. 
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-3 offset-4">
+            <div class="d-grid">
+                <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">login</button>
+                
+            </div>
+            
+        </div>
+        <p  style="color:blue;"routerLink="/register" class="btn btn-dange">New for shopping?  Click here for Sign Up</p>
+        <div class="text-center">
+            <a href="forgot-password" class="text-dark">Forgot Password</a>
+        </div>
+</div>
+
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<div class="text-center mt-5 text-muted">
+    Copyright &copy; 2022 &mdash; Capgemini
+</div>
+</body>

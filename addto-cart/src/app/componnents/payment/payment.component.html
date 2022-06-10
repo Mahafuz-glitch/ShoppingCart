@@ -1,0 +1,16 @@
+ 
+ <h3 style="margin-left: 40%">Select Your Payment Mode</h3>
+ <google-pay-button 
+ environment="TEST" 
+ buttonType="buy" 
+ buttonColor="black" 
+ [paymentRequest]="paymentRequest"           
+  (loadpaymentdata)="onLoadPaymentData($event)"
+  (error) ="onError($event)"
+[paymentAuthorizedCallback]="onPaymentDataAuthorized"
+style="margin-left: 43%"
+>
+</google-pay-button>
+<br>
+
+<button type="button" style="margin-left: 43% ; width: 240px ">Cash On Delivery</button>

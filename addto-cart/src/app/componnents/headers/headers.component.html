@@ -1,0 +1,24 @@
+<header>
+
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="side-nav-button p-2 me-3 text-light" (click)
+        ="SideNavToggle()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="navbar-brand align-item-center d-flex">
+            <!-- <div class="text"> -->
+            <strong style="font-size:30px">ONLINE SHOPPING CART</strong>
+        <!-- </div> -->
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="search products">
+            </div>
+            <span class ="fas fa-search search-icon"></span>
+        </div>
+        <button routerLink="loging" class="btn btn-success">login</button>
+        <button routerLink="cart" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>    
+            <div class="badge bg-danger">{{totalItemNumber}}</div>
+            
+        </button>
+    </div>
+</header>
